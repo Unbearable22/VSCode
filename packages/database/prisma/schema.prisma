@@ -1,0 +1,304 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+}
+model User {
+  id String @id @default(cuid())
+  email String @unique
+  name String
+  passwordHash String
+  role String @default("user")
+  blocked Boolean @default(false)
+  createdAt DateTime @default(now())
+  workspace Workspace?
+  sessions Session[]
+  tokens AuthToken[]
+  telegram TelegramAccount?
+  consents Consent[]
+}
+model Workspace {
+  id String @id @default(cuid())
+  ownerId String @unique
+  owner User @relation(fields:[ownerId],references:[id],onDelete:Cascade)
+  company CompanyProfile?
+  subscription Subscription?
+  calculations Calculation[]
+  deals Deal[]
+  proposals Proposal[]
+  clients Client[]
+  products Product[]
+  payments Payment[]
+  usage Usage[]
+  currency String @default("RUB")
+}
+model Session {
+  id String @id
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+model AuthToken {
+  id String @id
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  purpose String
+  expiresAt DateTime
+  usedAt DateTime?
+}
+model CompanyProfile {
+  id String @id @default(cuid())
+  workspaceId String @unique
+  workspace Workspace @relation(fields:[workspaceId],references:[id],onDelete:Cascade)
+  name String @default("")
+  details String @default("")
+  contacts String @default("")
+  logoKey String?
+  paymentTerms String @default("")
+  deliveryTerms String @default("")
+  warranty String @default("")
+}
+model Client {
+  id String @id @default(cuid())
+  workspaceId String
+  workspace Workspace @relation(fields:[workspaceId],references:[id],onDelete:Cascade)
+  name String
+  contact String @default("")
+  email String @default("")
+  phone String @default("")
+  details String @default("")
+  notes String @default("")
+  createdAt DateTime @default(now())
+  @@index([workspaceId])
+}
+model Product {
+  id String @id @default(cuid())
+  workspaceId String
+  workspace Workspace @relation(fields:[workspaceId],references:[id],onDelete:Cascade)
+  name String
+  sku String @default("")
+  unit String @default("шт.")
+  cost Decimal @db.Decimal(24,6)
+  price Decimal @db.Decimal(24,6)
+  createdAt DateTime @default(now())
+  @@index([workspaceId])
+}
+model Calculation {
+  id String @id @default(cuid())
+  workspaceId String
+  workspace Workspace @relation(fields:[workspaceId],references:[id],onDelete:Cascade)
+  kind String
+  title String
+  input Json
+  result Json
+  createdAt DateTime @default(now())
+  @@index([workspaceId])
+}
+model Deal {
+  id String @id @default(cuid())
+  workspaceId String
+  workspace Workspace @relation(fields:[workspaceId],references:[id],onDelete:Cascade)
+  title String
+  clientId String?
+  overhead Decimal @default(0) @db.Decimal(24,6)
+  allocation String @default("cost")
+  notes String @default("")
+  items DealItem[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([workspaceId])
+}
+model DealItem {
+  id String @id @default(cuid())
+  dealId String
+  deal Deal @relation(fields:[dealId],references:[id],onDelete:Cascade)
+  position Int
+  name String
+  sku String @default("")
+  quantity Decimal @db.Decimal(24,6)
+  unit String
+  cost Decimal @db.Decimal(24,6)
+  price Decimal @db.Decimal(24,6)
+  discount Decimal @db.Decimal(10,6)
+  expenses Decimal @db.Decimal(24,6)
+  vatMode String
+  vatRate Decimal @db.Decimal(10,6)
+  comment String @default("")
+}
+model Proposal {
+  id String @id @default(cuid())
+  workspaceId String
+  workspace Workspace @relation(fields:[workspaceId],references:[id],onDelete:Cascade)
+  title String
+  status String @default("draft")
+  createdAt DateTime @default(now())
+  versions ProposalVersion[]
+  @@index([workspaceId])
+}
+model ProposalVersion {
+  id String @id @default(cuid())
+  proposalId String
+  proposal Proposal @relation(fields:[proposalId],references:[id],onDelete:Cascade)
+  number Int
+  snapshot Json
+  createdAt DateTime @default(now())
+  links ShareLink[]
+  @@unique([proposalId,number])
+}
+model ShareLink {
+  id String @id @default(cuid())
+  token String @unique
+  versionId String
+  version ProposalVersion @relation(fields:[versionId],references:[id],onDelete:Cascade)
+  expiresAt DateTime
+  revokedAt DateTime?
+  views Int @default(0)
+  createdAt DateTime @default(now())
+}
+model Plan {
+  code String @id
+  name String
+  monthlyPrice Int
+  annualPrice Int
+  limits Json
+  active Boolean @default(true)
+}
+model Subscription {
+  id String @id @default(cuid())
+  workspaceId String @unique
+  workspace Workspace @relation(fields:[workspaceId],references:[id],onDelete:Cascade)
+  planCode String @default("free")
+  expiresAt DateTime?
+  autoRenew Boolean @default(false)
+  updatedAt DateTime @updatedAt
+}
+model Payment {
+  id String @id @default(cuid())
+  workspaceId String
+  workspace Workspace @relation(fields:[workspaceId],references:[id],onDelete:Cascade)
+  planCode String
+  period String
+  amount Decimal @db.Decimal(24,2)
+  status String @default("pending")
+  provider String @default("test")
+  promoCode String?
+  createdAt DateTime @default(now())
+  events PaymentEvent[]
+}
+model PaymentEvent {
+  id String @id
+  paymentId String
+  payment Payment @relation(fields:[paymentId],references:[id],onDelete:Cascade)
+  status String
+  createdAt DateTime @default(now())
+}
+model PromoCode {
+  code String @id
+  discount Int
+  expiresAt DateTime
+  maxUses Int
+  uses Int @default(0)
+  active Boolean @default(true)
+}
+model TelegramAccount {
+  id String @id @default(cuid())
+  userId String @unique
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  telegramId String @unique
+  notifications Boolean @default(true)
+  marketing Boolean @default(false)
+  createdAt DateTime @default(now())
+}
+model BotConversation {
+  id String @id @default(cuid())
+  telegramId String @unique
+  messages BotMessage[]
+  aiUsage Int @default(0)
+  usageDay String @default("")
+}
+model BotMessage {
+  id String @id @default(cuid())
+  conversationId String
+  conversation BotConversation @relation(fields:[conversationId],references:[id],onDelete:Cascade)
+  role String
+  text String
+  createdAt DateTime @default(now())
+}
+model Consent {
+  id String @id @default(cuid())
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  type String
+  granted Boolean
+  createdAt DateTime @default(now())
+}
+model KnowledgeArticle {
+  slug String @id
+  title String
+  body String
+  published Boolean @default(true)
+  updatedAt DateTime @updatedAt
+}
+model SupportRequest {
+  id String @id @default(cuid())
+  userId String?
+  telegramId String?
+  email String @default("")
+  text String
+  reply String @default("")
+  status String @default("open")
+  createdAt DateTime @default(now())
+}
+model AuditLog {
+  id String @id @default(cuid())
+  actorId String?
+  action String
+  targetId String?
+  createdAt DateTime @default(now())
+}
+model AnalyticsEvent {
+  id String @id @default(cuid())
+  name String
+  category String?
+  createdAt DateTime @default(now())
+  @@index([name,createdAt])
+}
+model Usage {
+  id String @id @default(cuid())
+  workspaceId String
+  workspace Workspace @relation(fields:[workspaceId],references:[id],onDelete:Cascade)
+  kind String
+  period String
+  count Int @default(0)
+  @@unique([workspaceId,kind,period])
+}
+model Setting {
+  key String @id
+  value Json
+}
+model AiUsage {
+  id String @id @default(cuid())
+  telegramId String
+  tokens Int
+  cost Decimal @db.Decimal(24,6)
+  currency String
+  estimated Boolean @default(true)
+  createdAt DateTime @default(now())
+}
+model Notification {
+  id String @id
+  userId String
+  text String
+  status String @default("pending")
+  attempts Int @default(0)
+  nextAttempt DateTime @default(now())
+  createdAt DateTime @default(now())
+  @@index([status,nextAttempt])
+}
+model RateBucket {
+  key String @id
+  count Int @default(1)
+  expiresAt DateTime
+}

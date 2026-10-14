@@ -11,13 +11,17 @@ meta:
   environment: docker
   toolchain:
     name: docker
+    version: latest
 build:
   dockerfile: infra/docker/Dockerfile
+  skip: false
 run:
   command: node
   args: infra/docker/amvera-start.mjs
   containerPort: 3000
   persistenceMount: /data
+  singleton: true
+  zeroDowntime: false
 ```
 
 Docker Compose используется только локально; на Amvera PostgreSQL подключается отдельным сервисом. В `DATABASE_URL` указывается его доступный приложению адрес, не localhost контейнера сайта. Сборка запускается из корня: `docker build -f infra/docker/Dockerfile -t margintools:amvera-test .`.
@@ -25,6 +29,8 @@ Docker Compose используется только локально; на Amve
 Amvera запускает `node infra/docker/amvera-start.mjs` по command/args в YAML. Этот профиль принудительно задаёт production, порт 3000, указанный адрес сайта, STAGING_MODE=true, локальное хранилище /data/private с явным разрешением, BILLING_MODE=disabled, TEST_BILLING_ENABLED=false и SEED_DEMO=false. Он не позволяет выключить staging через окружение и не запускает Telegram-бота. Затем выполняется обычный `infra/docker/start.mjs`: проверка окружения и записи, `npm run db:migrate` (Prisma migrate deploy), идемпотентный `npm run db:seed`, HTTP. Без DATABASE_URL и секрета HTTP-защиты запуск остановится. Обычный Docker CMD без этого профиля сохраняет требование S3 для production. `migrate reset` не используется.
 
 Развёртываемая ветка Amvera по документации — master. Перед первым push выполнить fetch, проверить refs и историю, затем отправить main:master без force. Если в Amvera уже есть свои коммиты, сначала изучить и согласовать конфигурацию. Авторизация только интерактивно в терминале: `git -c credential.helper= fetch amvera`, затем после проверки истории `git -c credential.helper= push amvera main:master`. Пароль вводится в запросе Git, не в командной строке, файле или URL. GitHub origin сохраняется отдельно.
+
+15.10.2026 получена начальная ветка Amvera master с отдельной историей и одним файлом amvera.yml. Истории объединены без переписывания. Конфигурация сведена к единственному amvera.yaml: сохранены Dockerfile, порт, диск, singleton=true, zeroDowntime=false и явный build.skip=false. Добавлен обязательный защищённый профиль запуска; второй конфликтующий YAML-файл исключён.
 
 ## Переменные и секреты
 

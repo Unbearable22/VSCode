@@ -2,10 +2,14 @@ meta:
   environment: docker
   toolchain:
     name: docker
+    version: latest
 build:
   dockerfile: infra/docker/Dockerfile
+  skip: false
 run:
   command: node
   args: infra/docker/amvera-start.mjs
   containerPort: 3000
   persistenceMount: /data
+  singleton: true
+  zeroDowntime: false

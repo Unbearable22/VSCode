@@ -19,6 +19,7 @@ apps/web/app/not-found.tsx
 apps/web/app/robots.ts
 apps/web/app/share/[token]/page.tsx
 apps/web/app/sitemap.ts
+apps/web/assets/DejaVuSans-Bold.ttf
 apps/web/assets/DejaVuSans.ttf
 apps/web/assets/FONT-LICENSE.txt
 apps/web/components/admin.tsx
@@ -57,6 +58,7 @@ packages/calculations/index.ts
 packages/config/amvera.ts
 packages/config/index.ts
 packages/config/runtime.ts
+packages/contracts/document-format.ts
 packages/contracts/index.ts
 packages/contracts/proposal.ts
 packages/database/index.ts
@@ -68,6 +70,7 @@ packages/database/security.ts
 packages/database/seed.ts
 packages/database/service.ts
 packages/documents/index.ts
+packages/documents/proposal-pdf.ts
 packages/files/index.ts
 playwright.config.ts
 prisma.config.ts
@@ -78,8 +81,10 @@ tests/deployment/prepare.mjs
 tests/e2e/admin.spec.ts
 tests/e2e/modal-focus.spec.ts
 tests/e2e/workflow.spec.ts
+tests/fixtures/proposal.ts
 tests/integration/bot.test.ts
 tests/integration/files.test.ts
+tests/proposals.test.ts
 tests/runtime.test.ts
 tsconfig.json
 vitest.config.ts

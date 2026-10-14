@@ -582,6 +582,7 @@ textarea:focus {
   margin: 16px 0;
 }
 .document {
+  font-family: var(--font-document), sans-serif;
   background: white;
   max-width: 850px;
   margin: 0 auto;
@@ -633,6 +634,7 @@ textarea:focus {
   border: 0;
 }
 .document table {
+  table-layout: fixed;
   font-size: 11px;
   min-width: 470px;
 }

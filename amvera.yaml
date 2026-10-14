@@ -5,5 +5,7 @@ meta:
 build:
   dockerfile: infra/docker/Dockerfile
 run:
+  command: node
+  args: infra/docker/amvera-start.mjs
   containerPort: 3000
   persistenceMount: /data

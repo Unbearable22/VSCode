@@ -46,6 +46,7 @@ docs/source-files.txt
 docs/status.md
 docs/test-plan.md
 infra/docker/Dockerfile
+infra/docker/amvera-start.mjs
 infra/docker/compose.yml
 infra/docker/start.mjs
 package-lock.json
@@ -53,6 +54,7 @@ package.json
 packages/ai-agent/index.ts
 packages/billing/index.ts
 packages/calculations/index.ts
+packages/config/amvera.ts
 packages/config/index.ts
 packages/config/runtime.ts
 packages/contracts/index.ts

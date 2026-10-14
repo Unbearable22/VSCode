@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { NextRequest } from "next/server";
 import { proxy } from "../apps/web/proxy";
+import { configureAmveraStaging } from "../packages/config/amvera";
 import {
   privateStorageDir,
   localStorageAllowed,
@@ -14,6 +15,26 @@ const env = {
 };
 afterEach(() => vi.unstubAllEnvs());
 describe("Развёртывание", () => {
+  it("принудительно защищает проект Amvera и блокирует запуск без секретов", () => {
+    const settings: Record<string, string | undefined> = {
+      STAGING_MODE: "false",
+      NODE_ENV: "development",
+      BILLING_MODE: "test",
+      TEST_BILLING_ENABLED: "true",
+    };
+    configureAmveraStaging(settings);
+    expect(settings.STAGING_MODE).toBe("true");
+    expect(settings.NODE_ENV).toBe("production");
+    expect(settings.PRIVATE_STORAGE_DIR).toBe("/data/private");
+    expect(settings.BILLING_MODE).toBe("disabled");
+    expect(settings.TEST_BILLING_ENABLED).toBe("false");
+    expect(settings.APP_URL).toBe(
+      "https://margintoolsweb-kirillkostyuk.msk1.amvera.tech",
+    );
+    expect(() => validateRuntime(settings)).toThrow("DATABASE_URL");
+    settings.DATABASE_URL = "postgresql://example/db";
+    expect(() => validateRuntime(settings)).toThrow("STAGING_BASIC_AUTH");
+  });
   it("разрешает локальный production только по точному явному флагу", () => {
     expect(localStorageAllowed(env)).toBe(false);
     expect(

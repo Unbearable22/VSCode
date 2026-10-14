@@ -13,8 +13,73 @@ const env = {
   APP_URL: "https://example.test",
   STORAGE_MODE: "local",
 };
-afterEach(() => vi.unstubAllEnvs());
+afterEach(() => {
+  vi.unstubAllEnvs();
+  vi.restoreAllMocks();
+});
 describe("Развёртывание", () => {
+  it("сохраняет staging-доступ для API и ресурсов без повторной Basic-авторизации", () => {
+    vi.stubEnv("STAGING_MODE", "true");
+    vi.stubEnv("STAGING_BASIC_AUTH_USER", "tester");
+    vi.stubEnv("STAGING_BASIC_AUTH_PASSWORD", "test-only-long-password");
+    const authorization =
+      "Basic " +
+      Buffer.from("tester:test-only-long-password").toString("base64");
+    const login = proxy(
+      new NextRequest("https://example.test/calculators", {
+        headers: { authorization },
+      }),
+    );
+    const session = login.cookies.get("mt_staging")!;
+    expect(session.httpOnly).toBe(true);
+    expect(session.secure).toBe(true);
+    expect(session.sameSite).toBe("lax");
+    expect(session.maxAge).toBe(28800);
+    expect(session.value).not.toContain("test-only-long-password");
+    for (const path of [
+      "/api/me",
+      "/_next/static/test.js",
+      "/app/dashboard",
+      "/share/token",
+    ]) {
+      const response = proxy(
+        new NextRequest("https://example.test" + path, {
+          headers: { cookie: `mt_staging=${session.value}` },
+        }),
+      );
+      expect(response.status).toBe(200);
+      expect(response.headers.get("WWW-Authenticate")).toBeNull();
+      expect(response.headers.get("X-Robots-Tag")).toContain("noindex");
+      expect(response.cookies.get("mt_staging")).toBeUndefined();
+    }
+  });
+  it("отклоняет подделанную, просроченную и отозванную сменой пароля staging-cookie", () => {
+    vi.stubEnv("STAGING_MODE", "true");
+    vi.stubEnv("STAGING_BASIC_AUTH_USER", "tester");
+    vi.stubEnv("STAGING_BASIC_AUTH_PASSWORD", "test-only-long-password");
+    const authorization =
+      "Basic " +
+      Buffer.from("tester:test-only-long-password").toString("base64");
+    const session = proxy(
+      new NextRequest("https://example.test", { headers: { authorization } }),
+    ).cookies.get("mt_staging")!.value;
+    const check = (value: string) =>
+      proxy(
+        new NextRequest("https://example.test", {
+          headers: { cookie: `mt_staging=${value}` },
+        }),
+      ).status;
+    expect(
+      check(session.slice(0, -1) + (session.endsWith("0") ? "1" : "0")),
+    ).toBe(401);
+    expect(check("forged")).toBe(401);
+    const now = Date.now();
+    vi.spyOn(Date, "now").mockReturnValue(now + 9 * 60 * 60 * 1000);
+    expect(check(session)).toBe(401);
+    vi.restoreAllMocks();
+    vi.stubEnv("STAGING_BASIC_AUTH_PASSWORD", "changed-test-only-password");
+    expect(check(session)).toBe(401);
+  });
   it("принудительно защищает проект Amvera и блокирует запуск без секретов", () => {
     const settings: Record<string, string | undefined> = {
       STAGING_MODE: "false",

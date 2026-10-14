@@ -44,7 +44,7 @@ if (process.argv[2] === "create") {
   const site = await request("/");
   assert.equal(site.status, 200);
   assert.match(site.headers.get("x-robots-tag"), /noindex/);
-  assert.equal((await request("/api/me")).status, 401);
+  assert.equal((await request("/api/me")).status, 403);
   assert.doesNotMatch(await (await request("/sitemap.xml")).text(), /<loc>/);
   const password = randomBytes(24).toString("hex");
   const registration = await request("/api/auth/register", "POST", {

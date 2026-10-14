@@ -35,7 +35,7 @@ import type { PublicProposal } from "@mt/contracts/proposal";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 const fail = (error: string, status = 400) =>
-  NextResponse.json({ error }, { status });
+  NextResponse.json({ error }, { status: status === 401 && process.env.STAGING_MODE === "true" ? 403 : status });
 const ok = (v: unknown) =>
   NextResponse.json(v, { headers: { "Cache-Control": "no-store" } });
 async function handle(

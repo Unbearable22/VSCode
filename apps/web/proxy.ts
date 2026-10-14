@@ -1,4 +1,9 @@
-import { createHash, timingSafeEqual } from "node:crypto";
+import {
+  createHash,
+  createHmac,
+  randomBytes,
+  timingSafeEqual,
+} from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
 
 export function proxy(request: NextRequest) {
@@ -18,13 +23,30 @@ export function proxy(request: NextRequest) {
       status: 503,
       headers,
     });
+  const lifetime = 8 * 60 * 60 * 1000;
+  const sign = (payload: string) =>
+    createHmac("sha256", JSON.stringify([user, password]))
+      .update(payload)
+      .digest("hex");
+  const saved = request.cookies.get("mt_staging")?.value || "";
+  let sessionValid = false;
+  if (/^\d{13}\.[a-f0-9]{32}\.[a-f0-9]{64}$/.test(saved)) {
+    const [expires, nonce, signature] = saved.split(".");
+    sessionValid =
+      Number(expires) > Date.now() &&
+      Number(expires) <= Date.now() + lifetime &&
+      timingSafeEqual(
+        Buffer.from(signature, "hex"),
+        Buffer.from(sign(`${expires}.${nonce}`), "hex"),
+      );
+  }
   const authorization = request.headers.get("authorization") || "";
   const expected = Buffer.from(`${user}:${password}`).toString("base64");
   const actual = authorization.startsWith("Basic ")
     ? authorization.slice(6)
     : "";
   const digest = (value: string) => createHash("sha256").update(value).digest();
-  if (!timingSafeEqual(digest(actual), digest(expected)))
+  if (!sessionValid && !timingSafeEqual(digest(actual), digest(expected)))
     return new NextResponse("Требуется доступ к тестовому сайту.", {
       status: 401,
       headers: {
@@ -33,6 +55,18 @@ export function proxy(request: NextRequest) {
       },
     });
   const response = NextResponse.next();
+  if (!sessionValid) {
+    const payload = `${Date.now() + lifetime}.${randomBytes(16).toString("hex")}`;
+    response.cookies.set("mt_staging", `${payload}.${sign(payload)}`, {
+      httpOnly: true,
+      secure:
+        process.env.NODE_ENV === "production" ||
+        request.nextUrl.protocol === "https:",
+      sameSite: "lax",
+      path: "/",
+      maxAge: lifetime / 1000,
+    });
+  }
   for (const [key, value] of Object.entries(headers))
     response.headers.set(key, value);
   return response;

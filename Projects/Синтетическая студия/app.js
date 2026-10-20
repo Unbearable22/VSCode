@@ -1,0 +1,1 @@
+document.getElementById('filter')?.addEventListener('click',()=>{document.getElementById('filter').textContent='Выбрано'});document.getElementById('request')?.addEventListener('submit',e=>{e.preventDefault();document.getElementById('status').textContent='Демонстрационная заявка сохранена'});

@@ -1,0 +1,39 @@
+'use strict';
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('#navigation');
+function closeMenu(){if(!menu)return;menu.setAttribute('aria-expanded','false');nav.classList.remove('open');menu.querySelector('span').textContent='+';}
+menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);menu.querySelector('span').textContent=open?'−':'+';});
+nav?.addEventListener('click',e=>{if(e.target.closest('a'))closeMenu();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu?.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus();}});
+const scene=document.querySelector('.light-scene');
+if(scene){
+ const mobileScene=window.matchMedia('(max-width:650px)');
+ const fitScene=()=>scene.setAttribute('viewBox',mobileScene.matches?'80 0 540 410':'0 0 1000 410');
+ fitScene();
+ mobileScene.addEventListener('change',fitScene);
+}
+const angle=document.querySelector('#angle');
+angle?.addEventListener('input',()=>{const a=Number(angle.value);document.querySelector('#angle-value').textContent=a+'°';const y=110+(a-15)*4.3;document.querySelector('#light-beam').setAttribute('d',`M185 65L860 ${y-85}L860 ${y+70}Z`);document.querySelector('#beam-line').setAttribute('d',`M185 65L860 ${y+70}`);});
+const projects=[
+{id:'01',title:'Тихий фокус',category:'accent',label:'Акцент',desc:'Один объект. Один луч. Всё внимание — на детали.',principle:'Узкий направленный луч отделяет предмет от фона.',place:'Камерная витрина или отдельный экспонат.',note:'Нужна проверка допустимой освещённости материала.',art:0},
+{id:'02',title:'Между плоскостями',category:'space',label:'Пространство',desc:'Световая граница, которая собирает зал в единую историю.',principle:'Скользящий свет выявляет рельеф и глубину плоскости.',place:'Стена, ниша или переход между залами.',note:'Результат зависит от фактуры и отражения поверхностей.',art:1},
+{id:'03',title:'Пауза в движении',category:'rhythm',label:'Ритм',desc:'Чередование света и тени меняет темп знакомства с выставкой.',principle:'Последовательность световых полос задаёт визуальный ритм.',place:'Проходная галерея или длинный выставочный зал.',note:'Маршрут должен сохранять безопасную видимость пола.',art:2},
+{id:'04',title:'Контур присутствия',category:'space',label:'Пространство',desc:'Мягкое свечение раскрывает форму через её границы.',principle:'Отражённый свет очерчивает силуэт без прямого луча.',place:'Небольшой зал с отдельным объёмным объектом.',note:'Учитываются блики, цвет стен и видимость источника.',art:3}
+];
+function art(n){const base='<path d="M0 250L600 185M0 285L600 220" stroke="#e8ddbd" stroke-opacity=".15"/>';const shapes=[
+'<path d="M116 0L474 275L208 275Z" fill="#f6c667" opacity=".13"/><path d="M116 0L341 275" stroke="#f6c667" opacity=".5"/><path d="M280 169L327 152V267L280 284Z" fill="#ede1c5"/><path d="M327 152L353 170V253L327 267Z" fill="#8b7e61"/><path d="M327 267L527 287L462 310L280 284Z" fill="#0c1016"/>',
+'<path d="M110 63L470 63V270H110Z" fill="#373b3d"/><path d="M110 63L145 80V270H110Z" fill="#efe0b5"/><path d="M145 80L470 270H145Z" fill="#f6c667" opacity=".19"/><path d="M145 80L470 270" stroke="#f6c667" opacity=".5"/><path d="M470 63L489 81V281L470 270Z" fill="#10141b"/>',
+'<path d="M90 20L180 20L330 300H240Z" fill="#f6c667" opacity=".24"/><path d="M225 20L275 20L425 300H375Z" fill="#f6c667" opacity=".34"/><path d="M355 20L383 20L533 300H505Z" fill="#f6c667" opacity=".48"/><path d="M25 300H580" stroke="#d6c8a7" opacity=".4"/>',
+'<path d="M210 65H374V270H210Z" fill="#10141b" stroke="#e4c97c" stroke-width="2"/><path d="M210 270L374 270L470 304L283 317Z" fill="#080c12"/><path d="M202 55H383V277H202Z" fill="none" stroke="#f6c667" stroke-width="13" opacity=".07"/><path d="M205 59H379V273H205Z" fill="none" stroke="#f6c667" stroke-width="4" opacity=".3"/>'
+];return `<svg viewBox="0 0 600 330" aria-hidden="true">${base}${shapes[n]}</svg>`;}
+const container=document.querySelector('#projects');
+if(container){container.innerHTML=projects.map(p=>`<article class="project" data-category="${p.category}"><div class="project-art">${art(p.art)}<span class="project-number">ЭТЮД / ${p.id}</span><span class="art-label">Авторская световая схема</span></div><div class="project-meta"><span>${p.label}</span><span>Демонстрационный проект</span></div><h3>${p.title}</h3><p class="project-desc">${p.desc}</p><button class="detail-button" aria-expanded="false" aria-controls="detail-${p.id}">О сценарии <span aria-hidden="true">+</span></button><div class="detail-content" id="detail-${p.id}" hidden><dl><dt>Принцип</dt><dd>${p.principle}</dd><dt>Где уместен</dt><dd>${p.place}</dd><dt>Условие</dt><dd>${p.note}</dd></dl><a href="approach.html#contact">Обсудить похожую задачу ↗</a></div></article>`).join('');
+container.addEventListener('click',e=>{const b=e.target.closest('.detail-button');if(!b)return;const open=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(open));document.getElementById(b.getAttribute('aria-controls')).hidden=!open;b.querySelector('span').textContent=open?'−':'+';});
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>{const selected=x===b;x.classList.toggle('active',selected);x.setAttribute('aria-pressed',String(selected));});let count=0;container.querySelectorAll('.project').forEach(p=>{p.hidden=b.dataset.filter!=='all'&&p.dataset.category!==b.dataset.filter;if(!p.hidden)count++;});document.querySelector('#result-count').textContent=`Найдено: ${count} · ${b.textContent}`;}));}
+const form=document.querySelector('#contact-form');
+if(form){const key='spektr-space-draft-v1';const fields=['name','email','task'];const draft=document.querySelector('#draft-status');const status=document.querySelector('#form-status');let storageAvailable=true;
+function setError(id,msg){const field=form.elements[id];field.setAttribute('aria-invalid',String(Boolean(msg)));field.setAttribute('aria-describedby',id+'-error');document.getElementById(id+'-error').textContent=msg;}
+try{const saved=JSON.parse(localStorage.getItem(key)||'null');if(saved&&typeof saved==='object'){fields.forEach(id=>{if(typeof saved[id]==='string')form.elements[id].value=saved[id].slice(0,id==='task'?3000:200);});draft.textContent='Локальный черновик восстановлен';}}catch(e){storageAvailable=false;draft.textContent='Локальное сохранение недоступно в этом браузере';}
+form.addEventListener('input',e=>{status.textContent='';if(fields.includes(e.target.name))setError(e.target.name,'');try{localStorage.setItem(key,JSON.stringify(Object.fromEntries(fields.map(id=>[id,form.elements[id].value]))));draft.textContent='Черновик сохранён в этом браузере';storageAvailable=true;}catch(e){storageAvailable=false;draft.textContent='Не удалось сохранить черновик — доступно только текущее заполнение';}});
+document.querySelector('#clear-draft').addEventListener('click',()=>{form.reset();fields.forEach(id=>setError(id,''));status.textContent='';try{localStorage.removeItem(key);draft.textContent='Черновик очищен';}catch(e){draft.textContent='Поля очищены; хранилище браузера недоступно';}});
+form.addEventListener('submit',e=>{e.preventDefault();let first=null;fields.forEach(id=>{const f=form.elements[id];let msg='';if(!f.value.trim())msg=id==='task'?'Опишите вашу задачу.':id==='email'?'Укажите электронную почту.':'Укажите имя.';else if(id==='email'&&f.validity.typeMismatch)msg='Введите email в формате name@example.ru.';setError(id,msg);if(msg&&!first)first=f;});if(first){status.textContent='Проверьте обязательные поля.';first.focus();return;}status.textContent='Демозаявка проверена. Ничего не отправлено: сервер и канал связи не подключены. '+(storageAvailable?'Черновик сохранён в этом браузере.':'Локальное сохранение недоступно.');status.focus();});}

@@ -1,0 +1,1 @@
+document.getElementById('filter')?.addEventListener('click',()=>{void 0});document.getElementById('request')?.addEventListener('submit',e=>{e.preventDefault();document.getElementById('status').textContent='Демонстрационная заявка сохранена'});

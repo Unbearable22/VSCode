@@ -1,0 +1,1197 @@
+{
+  "date": "2026-10-20",
+  "projects": [
+    {
+      "name": "ЛАД",
+      "kind": "static-site",
+      "versions": [
+        {
+          "version": "current",
+          "sha256": "b304f1281a6e880d08be06d8e0e857433a3355e5620d4063cac05e4dce108797",
+          "previews": [
+            "desktop.png",
+            "mobile.png"
+          ]
+        },
+        {
+          "version": "snapshot-7ad9112de2b2",
+          "sha256": "7ad9112de2b2a7513b14102de007314b27cdfa369ae860e23a3cb71a69b84503",
+          "previews": [
+            "desktop.png",
+            "mobile.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Контур",
+      "kind": "static-site",
+      "versions": [
+        {
+          "version": "current",
+          "sha256": "9a877a80e5f0d59b0e40512d1702e11086026596632829b7732bdfc249fa7575",
+          "previews": [
+            "index_html-desktop-section-1.png",
+            "index_html-desktop-section-2.png",
+            "index_html-desktop.png",
+            "index_html-mobile-motion-after.png",
+            "index_html-mobile-motion-before.png",
+            "index_html-mobile-section-1.png",
+            "index_html-mobile-section-2.png",
+            "index_html-mobile.png",
+            "index_html-tablet.png"
+          ]
+        },
+        {
+          "version": "snapshot-fdeed1e59aff",
+          "sha256": "fdeed1e59aff5ce6889c044f8680e275e4753dda3d50ac2aa7a85b7ed73b06fb",
+          "previews": [
+            "index_html-desktop-section-1.png",
+            "index_html-desktop-section-2.png",
+            "index_html-desktop.png",
+            "index_html-mobile-motion-after.png",
+            "index_html-mobile-motion-before.png",
+            "index_html-mobile-section-1.png",
+            "index_html-mobile-section-2.png",
+            "index_html-mobile.png",
+            "index_html-tablet.png"
+          ]
+        },
+        {
+          "version": "snapshot-faf452c36691",
+          "sha256": "faf452c366917a158fb68df7da36c5e19e88dd5dd83fac2b903b879de18aff31",
+          "previews": [
+            "index_html-desktop-section-1.png",
+            "index_html-desktop-section-2.png",
+            "index_html-desktop.png",
+            "index_html-mobile-motion-after.png",
+            "index_html-mobile-motion-before.png",
+            "index_html-mobile-section-1.png",
+            "index_html-mobile-section-2.png",
+            "index_html-mobile.png",
+            "index_html-tablet.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Северная линия",
+      "kind": "static-site",
+      "versions": [
+        {
+          "version": "current",
+          "sha256": "bff96e44a4c8c7fecd7dc0e7efd97ddd8a227b495f46e027ffe904e021ce9d8d",
+          "previews": [
+            "desktop.png",
+            "mobile.png",
+            "tablet.png"
+          ]
+        },
+        {
+          "version": "snapshot-9ff92eeda339",
+          "sha256": "9ff92eeda339a2670f2e289cee8dd125eb45b5e4d8b18a03e2b91064ea9f7c66",
+          "previews": [
+            "about_html-desktop.png",
+            "about_html-mobile.png",
+            "about_html-tablet.png",
+            "index_html-desktop.png",
+            "index_html-mobile.png",
+            "index_html-tablet.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Спектр пространства",
+      "kind": "static-site",
+      "versions": [
+        {
+          "version": "current",
+          "sha256": "6d0009129ec71e6e6cc2173feeb7826f56b444a47d07376a736d64464ae15aca",
+          "previews": [
+            "desktop.png",
+            "mobile.png",
+            "tablet.png"
+          ]
+        },
+        {
+          "version": "snapshot-46f453af539f",
+          "sha256": "46f453af539fc2310649209384b80db7da73391e1ad67d97aea20437ea738962",
+          "previews": [
+            "approach_html-desktop.png",
+            "approach_html-mobile.png",
+            "approach_html-tablet.png",
+            "index_html-desktop.png",
+            "index_html-mobile-motion-after.png",
+            "index_html-mobile-motion-before.png",
+            "index_html-mobile.png",
+            "index_html-tablet.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Синтетическая студия",
+      "kind": "technical-fixture",
+      "versions": [
+        {
+          "version": "current",
+          "sha256": "781de60f501732e77ee11d9b3f970b8b0dcf41a6bf46271292988005587917ff",
+          "previews": [
+            "desktop.png",
+            "mobile.png",
+            "tablet.png"
+          ]
+        },
+        {
+          "version": "snapshot-ff733d54907f",
+          "sha256": "ff733d54907fcc0070243c346779402cdb322f01bb347a50d3d90e4de6354169",
+          "previews": [
+            "about_html-desktop.png",
+            "about_html-mobile.png",
+            "about_html-tablet.png",
+            "index_html-desktop.png",
+            "index_html-mobile.png",
+            "index_html-tablet.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MarginTools",
+      "kind": "full-stack-source"
+    }
+  ],
+  "files": [
+    {
+      "path": "MarginTools/.env.example",
+      "bytes": 621,
+      "sha256": "bec50f3efa2262d31664c02cdba76a377e6e04836b79d08ebee3ab286af99939"
+    },
+    {
+      "path": "MarginTools/ARCHIVE.md",
+      "bytes": 851,
+      "sha256": "4ce20349bd127764dd788b2216d064f3bf1916da70effa165cffcda0028552e4"
+    },
+    {
+      "path": "MarginTools/README.md",
+      "bytes": 3767,
+      "sha256": "990dd1d56620e800ba6396638eb4674e70d54f4d8d64dbc1a122b5f26860eee7"
+    },
+    {
+      "path": "MarginTools/apps/bot/package.json",
+      "bytes": 43,
+      "sha256": "e6f7f59f8c9fb1d60bc039f3583b4d9b40bf5d87f30df24308c6a0d071451606"
+    },
+    {
+      "path": "MarginTools/apps/bot/src/core.ts",
+      "bytes": 2450,
+      "sha256": "5a275384869d9268b8a7e9eb671d94bd5a6a4751596165fe6c1ec78985cb20fa"
+    },
+    {
+      "path": "MarginTools/apps/bot/src/index.ts",
+      "bytes": 4206,
+      "sha256": "436e8c95bcd35de24fd594b412454df329b6ed4cdf4d38ea1056fd7daba1c70a"
+    },
+    {
+      "path": "MarginTools/apps/bot/src/interface.ts",
+      "bytes": 16727,
+      "sha256": "540e3c223e2f6451a77ecd7c655b16f2e885dc71ee3459ce64caee1259c41289"
+    },
+    {
+      "path": "MarginTools/apps/bot/src/notifications.ts",
+      "bytes": 1704,
+      "sha256": "a44f37e24097a899c8801594464bd8177dd878d59910a2ad03832bd331a44998"
+    },
+    {
+      "path": "MarginTools/apps/bot/src/presentation.ts",
+      "bytes": 984,
+      "sha256": "f2e246dac0839db54b399672fa1b4943917c767adaada26e479b17c7be4e7ec6"
+    },
+    {
+      "path": "MarginTools/apps/bot/src/proposals.ts",
+      "bytes": 1665,
+      "sha256": "6f29aafca4c3bd3ea95454943428caf6f3f03af14940eb2269d7c09a01ea5b61"
+    },
+    {
+      "path": "MarginTools/apps/web/AGENTS.md",
+      "bytes": 679,
+      "sha256": "063098f6cb31bb44c6f8fbea25b3876de7ee1e5f7d00a50dbab506f6415eb7f0"
+    },
+    {
+      "path": "MarginTools/apps/web/app/[[...slug]]/page.tsx",
+      "bytes": 1076,
+      "sha256": "d59667307e79ad43de243f5db34d40d32a73e1b7660bcfa1f6360cbe375228de"
+    },
+    {
+      "path": "MarginTools/apps/web/app/api/[...path]/route.ts",
+      "bytes": 38554,
+      "sha256": "80de41b3b1ae95444500cb33777b048aed65b424cb7681e0a63bd5877dc5e568"
+    },
+    {
+      "path": "MarginTools/apps/web/app/globals.css",
+      "bytes": 36916,
+      "sha256": "eb8113f9daa80efdb6d638f457cdb3cccae12517a666c726af23ea2dbb372450"
+    },
+    {
+      "path": "MarginTools/apps/web/app/layout.tsx",
+      "bytes": 1122,
+      "sha256": "a3f1c3dfccd12f24d309f147c94cab0866bda91c8733c1488bae85cd916f04ba"
+    },
+    {
+      "path": "MarginTools/apps/web/app/not-found.tsx",
+      "bytes": 332,
+      "sha256": "045fb077a7de3782ef51b9ed82f8484118365a75303e864d60eda21c8872a0e1"
+    },
+    {
+      "path": "MarginTools/apps/web/app/robots.ts",
+      "bytes": 383,
+      "sha256": "6948a65d2d535ece8c6251b809193e4747eeeb0e247a67884bf192361d472146"
+    },
+    {
+      "path": "MarginTools/apps/web/app/share/[token]/page.tsx",
+      "bytes": 618,
+      "sha256": "1506ffd143b07112b081be7f78755a7aaae5c6cdc3dcf58443010985daac671c"
+    },
+    {
+      "path": "MarginTools/apps/web/app/sitemap.ts",
+      "bytes": 577,
+      "sha256": "d391fabde79ac24c61ee622a7d712b7ff21626fcbb14d1841398d7114557a7f8"
+    },
+    {
+      "path": "MarginTools/apps/web/assets/DejaVuSans-Bold.ttf",
+      "bytes": 708920,
+      "sha256": "5c1247acef7f2b8522a31742c76d6adcb5569bacc0be7ceaa4dc39dd252ce895"
+    },
+    {
+      "path": "MarginTools/apps/web/assets/DejaVuSans.ttf",
+      "bytes": 759720,
+      "sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280"
+    },
+    {
+      "path": "MarginTools/apps/web/assets/FONT-LICENSE.txt",
+      "bytes": 3859,
+      "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9"
+    },
+    {
+      "path": "MarginTools/apps/web/components/admin.tsx",
+      "bytes": 19902,
+      "sha256": "26d94a7179dbddcf4f06396fa51bbc664255fa3fb731965c544d9426dd1ffca8"
+    },
+    {
+      "path": "MarginTools/apps/web/components/app.tsx",
+      "bytes": 26899,
+      "sha256": "dd9dc7039c55479390bc83ba2178b340df7e8efe9e59c52f3783d212fbde4d24"
+    },
+    {
+      "path": "MarginTools/apps/web/components/calculator.tsx",
+      "bytes": 11442,
+      "sha256": "0b8e53159ee9aef5e354cdc88d45349bdee4478c6516ec8acf913981e764424d"
+    },
+    {
+      "path": "MarginTools/apps/web/components/deal-editor.tsx",
+      "bytes": 16684,
+      "sha256": "81649cabfa8588553f800befa7d7ed8dce5d219b473a6cce6a804a0541179e51"
+    },
+    {
+      "path": "MarginTools/apps/web/components/proposal-view.tsx",
+      "bytes": 3363,
+      "sha256": "3aca6b08545292226ca280557a397a944f102bbea6c56a239b32313de740fa9e"
+    },
+    {
+      "path": "MarginTools/apps/web/components/ui.tsx",
+      "bytes": 3898,
+      "sha256": "612a06a585901613c3ae368d0351a91de1e5d7163c0dab155f72090c34d40154"
+    },
+    {
+      "path": "MarginTools/apps/web/components/workspace.tsx",
+      "bytes": 37933,
+      "sha256": "8b8a823db764f5c3e6dd375f17704c3eb80e79763574131a84560949d6ea4bb6"
+    },
+    {
+      "path": "MarginTools/apps/web/lib/auth.ts",
+      "bytes": 194,
+      "sha256": "73300c125336dc647bdd7e329b8082a84fb4ac8ebecbdae86ecc91d4725fda6e"
+    },
+    {
+      "path": "MarginTools/apps/web/next-env.d.ts",
+      "bytes": 296,
+      "sha256": "0f70629890b72a0a82e91972cc032c04b658b26c265373cb711cf576bfbf8fcc"
+    },
+    {
+      "path": "MarginTools/apps/web/next.config.ts",
+      "bytes": 232,
+      "sha256": "3740533ae5220c0bb4b95cae6c060465055226654fe010054c24677e2842cc29"
+    },
+    {
+      "path": "MarginTools/apps/web/package.json",
+      "bytes": 152,
+      "sha256": "ac8dfa9104bedd57f0d042975967bf217621528813bbb33f1ae2d7897638cf0e"
+    },
+    {
+      "path": "MarginTools/apps/web/postcss.config.mjs",
+      "bytes": 60,
+      "sha256": "f50058e0d309cdb3e7c25a1123337338641fb71e988572607d57f47209db1fd1"
+    },
+    {
+      "path": "MarginTools/apps/web/proxy.ts",
+      "bytes": 2683,
+      "sha256": "9695dee2faba630c8378e0be44947f3f7964dc467ccccda2f2781f056c827c29"
+    },
+    {
+      "path": "MarginTools/apps/web/tsconfig.json",
+      "bytes": 278,
+      "sha256": "d63abad25c3c178a13f99ccd235e0e583959228bfb2c7afd07708a2057982001"
+    },
+    {
+      "path": "MarginTools/docs/amvera.md",
+      "bytes": 16106,
+      "sha256": "4bbcc46392266c9cdccab1c8c5f6f57788626fafc54c0b08fd17d6ed0e1b4a04"
+    },
+    {
+      "path": "MarginTools/docs/architecture.md",
+      "bytes": 3055,
+      "sha256": "ecc637a7c17d7bf0b42ff332f62414ae901c4326dca2336d585eba24868d39b5"
+    },
+    {
+      "path": "MarginTools/docs/bot-scenarios.md",
+      "bytes": 5675,
+      "sha256": "d2dc4ffdbac5e8c72d6e1f20af7e6e03ed52e21a306e9d12f12dc12bbc12c21e"
+    },
+    {
+      "path": "MarginTools/docs/calculation-rules.md",
+      "bytes": 2552,
+      "sha256": "53d713419fb3e440864abdc670da41514879e186814aacf035d15bb3eb354315"
+    },
+    {
+      "path": "MarginTools/docs/deployment.md",
+      "bytes": 6110,
+      "sha256": "e145dc039713eb5554e923b0e8b212dfc44f1ca7bd67b84d940253d001a65608"
+    },
+    {
+      "path": "MarginTools/docs/git-backup.md",
+      "bytes": 3850,
+      "sha256": "6c4b82d3808afdf1c522df0b9f8743fbd8e2e679af77300ce640b29480c05cde"
+    },
+    {
+      "path": "MarginTools/docs/product-spec.md",
+      "bytes": 36691,
+      "sha256": "49f86767cffb7655f72a111720bf2b4d31fd6d26b183e03db1b6ffa47996a2e7"
+    },
+    {
+      "path": "MarginTools/docs/source-files.txt",
+      "bytes": 4890,
+      "sha256": "bf13a69b743a719ae55b4a9b921d57423258a35de4a258f25b2d2dc6377c8175"
+    },
+    {
+      "path": "MarginTools/docs/status.md",
+      "bytes": 13253,
+      "sha256": "c97b6621f16ead1fa1d887d2bd7a257d1742695c7e3d5710c0c55343a7e51261"
+    },
+    {
+      "path": "MarginTools/docs/test-plan.md",
+      "bytes": 3883,
+      "sha256": "eba3bf9022ef3fb3af3be21ef4fb45760454320bbc967c92637cf316dfc090f0"
+    },
+    {
+      "path": "MarginTools/infra/docker/Dockerfile",
+      "bytes": 320,
+      "sha256": "c5495fc14efab602cc3581b401c1868f7136c803ac0a6c71dc99ddd2627e4a42"
+    },
+    {
+      "path": "MarginTools/infra/docker/amvera-start.mjs",
+      "bytes": 141,
+      "sha256": "f01c33c86978d97dbce01c02493cfcc2d2f6265f486e4b3784d2df0ba99d5a2f"
+    },
+    {
+      "path": "MarginTools/infra/docker/compose.yml",
+      "bytes": 439,
+      "sha256": "50b68daa107c7da529dd2e03bd44e5af4d0170d154cfc2fa58a3f445e16fe9a0"
+    },
+    {
+      "path": "MarginTools/infra/docker/start.mjs",
+      "bytes": 1742,
+      "sha256": "e5f4099142fa484a13ca38a1b498fd47182972898d30314f924d44f8101bd06d"
+    },
+    {
+      "path": "MarginTools/package-lock.json",
+      "bytes": 301406,
+      "sha256": "846717fe29c3eed9c319e31dbd6933f88aa53d0ae6aa60f7aef56be1538f54cc"
+    },
+    {
+      "path": "MarginTools/package.json",
+      "bytes": 1576,
+      "sha256": "ecc14143f71ef6fb432061b1788a6a9ab92058618ed330c055d06e8160b2ac10"
+    },
+    {
+      "path": "MarginTools/packages/ai-agent/index.ts",
+      "bytes": 10292,
+      "sha256": "9803e54b288315f6162215c82061097cf78b8ddfe7306642628e0df6d30eccfb"
+    },
+    {
+      "path": "MarginTools/packages/billing/index.ts",
+      "bytes": 5009,
+      "sha256": "1a21bd513e002768f697431a4108341afd0dca39bb5e9b0abf7b9b22e887fd33"
+    },
+    {
+      "path": "MarginTools/packages/calculations/index.ts",
+      "bytes": 5181,
+      "sha256": "a05162e29db195968195189ad652a1c0d154b3d733df0f0f19f9b3de650d2a42"
+    },
+    {
+      "path": "MarginTools/packages/config/amvera.ts",
+      "bytes": 465,
+      "sha256": "db9af62a51156eeabbce9770d803b4bde66e246c90e46511f05d7a4f606a95a4"
+    },
+    {
+      "path": "MarginTools/packages/config/index.ts",
+      "bytes": 2547,
+      "sha256": "139a5a9a59dd0d7e83d19003aef62f1e9ede451ee09a4d419298e0780e9c5cfe"
+    },
+    {
+      "path": "MarginTools/packages/config/runtime.ts",
+      "bytes": 2535,
+      "sha256": "be23a7b756a3be6ac36bba835729511eb5c02ac93e3f9bdc223f7e435a1f7b39"
+    },
+    {
+      "path": "MarginTools/packages/contracts/document-format.ts",
+      "bytes": 772,
+      "sha256": "dabdcb0ff3687349b9583b0cc8a87bbbe2950f729eb002b83a0d31f9f657ae52"
+    },
+    {
+      "path": "MarginTools/packages/contracts/index.ts",
+      "bytes": 2186,
+      "sha256": "63d6e41d4f7a4661984213324c281249efd863219ba7a714df7e36bbf0a006d5"
+    },
+    {
+      "path": "MarginTools/packages/contracts/proposal.ts",
+      "bytes": 1203,
+      "sha256": "9a6ba9eafde2dc75b2795661aa203e5ef5485adc61283814f5a1a739edb0a9c5"
+    },
+    {
+      "path": "MarginTools/packages/database/index.ts",
+      "bytes": 740,
+      "sha256": "75efb17ba12e643d5848dccdfd90bd17a1e3387bcfbfbb7988c903ae953ff6c4"
+    },
+    {
+      "path": "MarginTools/packages/database/prisma/migrations/202610140001_init/migration.sql",
+      "bytes": 13998,
+      "sha256": "c39a45cc899fca479b19280d67196c52efc89039b83a140c569575af001b18c2"
+    },
+    {
+      "path": "MarginTools/packages/database/prisma/migrations/202610140002_notifications_ai_usage/migration.sql",
+      "bytes": 790,
+      "sha256": "1f48a03fa71863fd1bc6cef0a2236a85efe75f4ec74621e935c156c75e996900"
+    },
+    {
+      "path": "MarginTools/packages/database/prisma/migrations/migration_lock.toml",
+      "bytes": 24,
+      "sha256": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210"
+    },
+    {
+      "path": "MarginTools/packages/database/prisma/schema.prisma",
+      "bytes": 7880,
+      "sha256": "1bb11c0600515b0ba83fb28ff373885fdc3921906fc17d384a9e6a4a0df4d0ed"
+    },
+    {
+      "path": "MarginTools/packages/database/security.ts",
+      "bytes": 1821,
+      "sha256": "0408fde0370eb802513319b522d904c42454971c6e2c22994dd449a0397f3f0e"
+    },
+    {
+      "path": "MarginTools/packages/database/seed.ts",
+      "bytes": 1459,
+      "sha256": "5447ede84b0a2d46b94422a11d4fb78b26adbc74bcbbbec24d2bcac1872e2076"
+    },
+    {
+      "path": "MarginTools/packages/database/service.ts",
+      "bytes": 5807,
+      "sha256": "b45b00838f70a14bb6c2fa5adde5fca3eeeb94646ac42e5f09382a6182fb4b86"
+    },
+    {
+      "path": "MarginTools/packages/documents/index.ts",
+      "bytes": 1482,
+      "sha256": "c0e4b49037deac4133049c18abaf0bba0f5118099bdde8b809ff1201151f8313"
+    },
+    {
+      "path": "MarginTools/packages/documents/proposal-pdf.ts",
+      "bytes": 10205,
+      "sha256": "773f86e038b9f1835f613de20c7d12d774cdae5622c37dd38a4bf1a111aa8eff"
+    },
+    {
+      "path": "MarginTools/packages/files/index.ts",
+      "bytes": 3329,
+      "sha256": "2df256d6eeb52bb76589a88ee09aadafe1ac64b5dbfce319e6778adb548efabc"
+    },
+    {
+      "path": "MarginTools/playwright.config.ts",
+      "bytes": 250,
+      "sha256": "9bb2bd00a3af645cc91141659ab2c5e25b008d720f2eb42bdecfccb5ddf9db07"
+    },
+    {
+      "path": "MarginTools/previews/admin-desktop.png",
+      "bytes": 57166,
+      "sha256": "f79d27815d3cdb8a8e5321a622bbec4ba7239224d1f21c376e22174ec8d7d6a5"
+    },
+    {
+      "path": "MarginTools/previews/deal-mobile.png",
+      "bytes": 101146,
+      "sha256": "04f815d382cfe341176aedeab3658793d369340bbe19933b640a981fd3cfdf3c"
+    },
+    {
+      "path": "MarginTools/previews/home-desktop.png",
+      "bytes": 284595,
+      "sha256": "c76bc86e5c715c6451b511a6e1d5e019bd581c8787a9423b4d7d1a84d44354d8"
+    },
+    {
+      "path": "MarginTools/previews/home-mobile.png",
+      "bytes": 248091,
+      "sha256": "eefc37b15dcf4c59f354ffe692c832129ddb5051b256426d258f658c667f2597"
+    },
+    {
+      "path": "MarginTools/prisma.config.ts",
+      "bytes": 366,
+      "sha256": "fbf59458c33ff724d025aa94559ac7186739c3961ac61b16e813ba99fb1c110e"
+    },
+    {
+      "path": "MarginTools/tests/bot-interface.test.ts",
+      "bytes": 7950,
+      "sha256": "e7ecda4490b26dc4fba97988ec98cfde52cd0af73de9bbaa9322e98f3ae9cff1"
+    },
+    {
+      "path": "MarginTools/tests/calculations.test.ts",
+      "bytes": 2140,
+      "sha256": "a7fd2c3711afb66525f81066bb8c4ca98964141a0fbe434c9a447cadb120f0e8"
+    },
+    {
+      "path": "MarginTools/tests/deployment/amvera-smoke.mjs",
+      "bytes": 4574,
+      "sha256": "a13d677e9d3f9d617bb341ee88d185c21c398ccebe301028869467e9f692e25a"
+    },
+    {
+      "path": "MarginTools/tests/deployment/prepare.mjs",
+      "bytes": 894,
+      "sha256": "a5ebd9c59602817613b59fcd95cc524a0bec217d0ab9c64e9c213b62520a23a2"
+    },
+    {
+      "path": "MarginTools/tests/e2e/admin.spec.ts",
+      "bytes": 4067,
+      "sha256": "c5f3c9fc32e12cb66f64be8f2e326678cb00b66f5004461a8c32d6044dc69bb3"
+    },
+    {
+      "path": "MarginTools/tests/e2e/modal-focus.spec.ts",
+      "bytes": 2985,
+      "sha256": "742abbf21f4485ed404eacd33fec87eafd52427f56009384a6ad44734ff6c8cc"
+    },
+    {
+      "path": "MarginTools/tests/e2e/workflow.spec.ts",
+      "bytes": 8432,
+      "sha256": "325fee887a43bbdfd96772cf908e5473dc8a5cbb8c9074a2e19ef58c28eb6688"
+    },
+    {
+      "path": "MarginTools/tests/fixtures/proposal.ts",
+      "bytes": 1012,
+      "sha256": "10d0e80421f13d2016f6a73f3478c11814c8d61da5b61a45015027d2965210ca"
+    },
+    {
+      "path": "MarginTools/tests/integration/bot.test.ts",
+      "bytes": 6185,
+      "sha256": "28ecee66e3a4bb8768c5b3f90acd6f052456c5219e9c0d7b9da282ec09cb05a8"
+    },
+    {
+      "path": "MarginTools/tests/integration/files.test.ts",
+      "bytes": 2403,
+      "sha256": "55e52fdef92fb440e2440c5936c5526d79aa73b67e711648e94e70081b367f72"
+    },
+    {
+      "path": "MarginTools/tests/proposals.test.ts",
+      "bytes": 4280,
+      "sha256": "8361f9f235a0cfd2ef5db0e07ec8d1d3b69240c2afd760f7fc23247976e653f9"
+    },
+    {
+      "path": "MarginTools/tests/runtime.test.ts",
+      "bytes": 7196,
+      "sha256": "8495ca16853e07a798ede66c2184bfeb135e7c836b2a8cc03a82522f11cce4d8"
+    },
+    {
+      "path": "MarginTools/tsconfig.json",
+      "bytes": 476,
+      "sha256": "d42399e7a04a1ea884514b540b7a5bbe782eea8a90dcc887f18860f17356e077"
+    },
+    {
+      "path": "MarginTools/vitest.config.ts",
+      "bytes": 111,
+      "sha256": "e2df989e41a5c516af921bbdad57c60d1712131d782fe0962b54e0e1195c471e"
+    },
+    {
+      "path": "MarginTools/vitest.integration.config.ts",
+      "bytes": 278,
+      "sha256": "b5a9113dd580a453c709442b3261c6763f98783dc66cf57551f3cd870c189817"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1676,
+      "sha256": "3e431ba5e68ccd7af46cefe240c6dc17cb2fe7f019c35fa5c1e9ad7b3fa1cca1"
+    },
+    {
+      "path": "Контур/ARCHIVE.md",
+      "bytes": 620,
+      "sha256": "a2788bb453b2595f2c940a580557933c742c5f712c5b9c923777780b51843cfe"
+    },
+    {
+      "path": "Контур/app.js",
+      "bytes": 50006,
+      "sha256": "0e12f26c36b540296b859b53dd16aa9fc5586f5d40dccea34bce348b320f6883"
+    },
+    {
+      "path": "Контур/index.html",
+      "bytes": 14398,
+      "sha256": "783fec5b090f5e72c75f211b4bc47edbbff41d19b91253cd6d881e528965f692"
+    },
+    {
+      "path": "Контур/previews/index_html-desktop-section-1.png",
+      "bytes": 179939,
+      "sha256": "77e80ce3d26891fdfcb58a866cabad457c94907d7a51818aa8d8a0d0e86e6144"
+    },
+    {
+      "path": "Контур/previews/index_html-desktop-section-2.png",
+      "bytes": 106021,
+      "sha256": "262f080e6f1f250bcce6f9b431ece811173614320483a7577d1aa1ec45535368"
+    },
+    {
+      "path": "Контур/previews/index_html-desktop.png",
+      "bytes": 207905,
+      "sha256": "dc7e4dc0d42d1c194812119f26ea4096b0d9ff26809328f64a7ce024bba8612f"
+    },
+    {
+      "path": "Контур/previews/index_html-mobile-motion-after.png",
+      "bytes": 75223,
+      "sha256": "a4ab026285859673b664fa1351d96c1f84de79e28f77662d8b355c0126829962"
+    },
+    {
+      "path": "Контур/previews/index_html-mobile-motion-before.png",
+      "bytes": 75223,
+      "sha256": "a4ab026285859673b664fa1351d96c1f84de79e28f77662d8b355c0126829962"
+    },
+    {
+      "path": "Контур/previews/index_html-mobile-section-1.png",
+      "bytes": 70915,
+      "sha256": "ea9b67885acd0a4da49256e5bcb585598e38de87b9bd6e6712241d47566d0941"
+    },
+    {
+      "path": "Контур/previews/index_html-mobile-section-2.png",
+      "bytes": 52916,
+      "sha256": "83d334b78165b49404c55130c71b70ad9c034731aac1aac84dc17c43f9c14e7c"
+    },
+    {
+      "path": "Контур/previews/index_html-mobile.png",
+      "bytes": 75229,
+      "sha256": "296ecf2879796be5ccb695bfc9674f0c8708867854f80ea6cca0bcdbd2248940"
+    },
+    {
+      "path": "Контур/previews/index_html-tablet.png",
+      "bytes": 113018,
+      "sha256": "ab4d29c9030d5714c4bb5734aaa7ce0386f235aa7c3b97b386b85af97f174ffd"
+    },
+    {
+      "path": "Контур/styles.css",
+      "bytes": 30265,
+      "sha256": "4f5bc6088038eb5af93868ce89fe81e86a5b37b01558de62d1ddf20e062317c9"
+    },
+    {
+      "path": "Контур/versions/snapshot-faf452c36691/app.js",
+      "bytes": 46273,
+      "sha256": "c9487896482a1c062416f5760e9599fb279caec2491aad4f2c4f696ca825eda6"
+    },
+    {
+      "path": "Контур/versions/snapshot-faf452c36691/index.html",
+      "bytes": 14398,
+      "sha256": "783fec5b090f5e72c75f211b4bc47edbbff41d19b91253cd6d881e528965f692"
+    },
+    {
+      "path": "Контур/versions/snapshot-faf452c36691/previews/index_html-desktop-section-1.png",
+      "bytes": 189737,
+      "sha256": "98fab98aaf6e44ff540562c700f8ea2823c3b265045d15e627bd949850bc2adb"
+    },
+    {
+      "path": "Контур/versions/snapshot-faf452c36691/previews/index_html-desktop-section-2.png",
+      "bytes": 106021,
+      "sha256": "262f080e6f1f250bcce6f9b431ece811173614320483a7577d1aa1ec45535368"
+    },
+    {
+      "path": "Контур/versions/snapshot-faf452c36691/previews/index_html-desktop.png",
+      "bytes": 207905,
+      "sha256": "dc7e4dc0d42d1c194812119f26ea4096b0d9ff26809328f64a7ce024bba8612f"
+    },
+    {
+      "path": "Контур/versions/snapshot-faf452c36691/previews/index_html-mobile-motion-after.png",
+      "bytes": 75223,
+      "sha256": "a4ab026285859673b664fa1351d96c1f84de79e28f77662d8b355c0126829962"
+    },
+    {
+      "path": "Контур/versions/snapshot-faf452c36691/previews/index_html-mobile-motion-before.png",
+      "bytes": 75223,
+      "sha256": "a4ab026285859673b664fa1351d96c1f84de79e28f77662d8b355c0126829962"
+    },
+    {
+      "path": "Контур/versions/snapshot-faf452c36691/previews/index_html-mobile-section-1.png",
+      "bytes": 70915,
+      "sha256": "ea9b67885acd0a4da49256e5bcb585598e38de87b9bd6e6712241d47566d0941"
+    },
+    {
+      "path": "Контур/versions/snapshot-faf452c36691/previews/index_html-mobile-section-2.png",
+      "bytes": 52909,
+      "sha256": "89fc225f6e18a3acfb61645f7d23d22f7182d54be3df0ad2e2b6cb729c7f4c83"
+    },
+    {
+      "path": "Контур/versions/snapshot-faf452c36691/previews/index_html-mobile.png",
+      "bytes": 75229,
+      "sha256": "296ecf2879796be5ccb695bfc9674f0c8708867854f80ea6cca0bcdbd2248940"
+    },
+    {
+      "path": "Контур/versions/snapshot-faf452c36691/previews/index_html-tablet.png",
+      "bytes": 141673,
+      "sha256": "3fdf63a6dbb4a9c1ed3a06958f98406a89497e78efea8ac4ec4ae89f14ad9d1d"
+    },
+    {
+      "path": "Контур/versions/snapshot-faf452c36691/styles.css",
+      "bytes": 29791,
+      "sha256": "78da254c9d326e74597b3042cb778db4781c8dd8dcee41f60b25b880b60d8b41"
+    },
+    {
+      "path": "Контур/versions/snapshot-fdeed1e59aff/app.js",
+      "bytes": 45503,
+      "sha256": "b8663c175148ef8bc739563105496445463a60c268441868642cd2edcaaaf0ae"
+    },
+    {
+      "path": "Контур/versions/snapshot-fdeed1e59aff/index.html",
+      "bytes": 14375,
+      "sha256": "93d8a625af58cdcedd9615a2f67cc6fd8215266fbef8b66ff876f6f0a8ab269f"
+    },
+    {
+      "path": "Контур/versions/snapshot-fdeed1e59aff/previews/index_html-desktop-section-1.png",
+      "bytes": 189737,
+      "sha256": "98fab98aaf6e44ff540562c700f8ea2823c3b265045d15e627bd949850bc2adb"
+    },
+    {
+      "path": "Контур/versions/snapshot-fdeed1e59aff/previews/index_html-desktop-section-2.png",
+      "bytes": 106021,
+      "sha256": "262f080e6f1f250bcce6f9b431ece811173614320483a7577d1aa1ec45535368"
+    },
+    {
+      "path": "Контур/versions/snapshot-fdeed1e59aff/previews/index_html-desktop.png",
+      "bytes": 207905,
+      "sha256": "dc7e4dc0d42d1c194812119f26ea4096b0d9ff26809328f64a7ce024bba8612f"
+    },
+    {
+      "path": "Контур/versions/snapshot-fdeed1e59aff/previews/index_html-mobile-motion-after.png",
+      "bytes": 75229,
+      "sha256": "296ecf2879796be5ccb695bfc9674f0c8708867854f80ea6cca0bcdbd2248940"
+    },
+    {
+      "path": "Контур/versions/snapshot-fdeed1e59aff/previews/index_html-mobile-motion-before.png",
+      "bytes": 75229,
+      "sha256": "296ecf2879796be5ccb695bfc9674f0c8708867854f80ea6cca0bcdbd2248940"
+    },
+    {
+      "path": "Контур/versions/snapshot-fdeed1e59aff/previews/index_html-mobile-section-1.png",
+      "bytes": 70915,
+      "sha256": "ea9b67885acd0a4da49256e5bcb585598e38de87b9bd6e6712241d47566d0941"
+    },
+    {
+      "path": "Контур/versions/snapshot-fdeed1e59aff/previews/index_html-mobile-section-2.png",
+      "bytes": 52909,
+      "sha256": "89fc225f6e18a3acfb61645f7d23d22f7182d54be3df0ad2e2b6cb729c7f4c83"
+    },
+    {
+      "path": "Контур/versions/snapshot-fdeed1e59aff/previews/index_html-mobile.png",
+      "bytes": 75229,
+      "sha256": "296ecf2879796be5ccb695bfc9674f0c8708867854f80ea6cca0bcdbd2248940"
+    },
+    {
+      "path": "Контур/versions/snapshot-fdeed1e59aff/previews/index_html-tablet.png",
+      "bytes": 141673,
+      "sha256": "3fdf63a6dbb4a9c1ed3a06958f98406a89497e78efea8ac4ec4ae89f14ad9d1d"
+    },
+    {
+      "path": "Контур/versions/snapshot-fdeed1e59aff/styles.css",
+      "bytes": 29791,
+      "sha256": "78da254c9d326e74597b3042cb778db4781c8dd8dcee41f60b25b880b60d8b41"
+    },
+    {
+      "path": "ЛАД/ARCHIVE.md",
+      "bytes": 614,
+      "sha256": "e542f3061b5519f72d887d3f4c9c3f03cdeab9b9f207a7123c330c448953c68a"
+    },
+    {
+      "path": "ЛАД/app.js",
+      "bytes": 26799,
+      "sha256": "66e2d87bd31d2aa44d6e053990bab53ecb3d6e9df4bd6b0edc0ae8a75daa8655"
+    },
+    {
+      "path": "ЛАД/assets/midnight.wav",
+      "bytes": 529244,
+      "sha256": "74f3548b78f413769fed7b90eb36b475870de6db211a0730aa43ce22df14f834"
+    },
+    {
+      "path": "ЛАД/assets/peaks.js",
+      "bytes": 1747,
+      "sha256": "f81f5c3cafb2598ea2aba3c96a6b77918a459f50dfdfe2cf7cfb3f2e0f0642c4"
+    },
+    {
+      "path": "ЛАД/assets/tide.wav",
+      "bytes": 529244,
+      "sha256": "d17ab216cf77e1cc12779747722854db169f0dc00b8a5d6dc9cb367610c613a7"
+    },
+    {
+      "path": "ЛАД/assets/warm.wav",
+      "bytes": 529244,
+      "sha256": "da796cd543a710dffe1277cf9abfb88c7ed4011f022ddc1c07fd5bfc98a3d65b"
+    },
+    {
+      "path": "ЛАД/index.html",
+      "bytes": 20415,
+      "sha256": "94df84aaef353f4bb3034865810bc8f71124df928b947be76ce47b9d49c515d6"
+    },
+    {
+      "path": "ЛАД/previews/desktop.png",
+      "bytes": 256053,
+      "sha256": "5965d0ed8c11348443d2df2eb9f36e3a5029e75e28e1f1876430c70fff61199f"
+    },
+    {
+      "path": "ЛАД/previews/mobile.png",
+      "bytes": 168456,
+      "sha256": "9e8546025d61aa1bc14d2ad9296d8ede8b46e13c25b1fdb84271101b27f58beb"
+    },
+    {
+      "path": "ЛАД/styles.css",
+      "bytes": 28024,
+      "sha256": "32148d4cfcd284c7bbfba1ed3ba67c3ed58143bdde25ac966f790bda25e2f59d"
+    },
+    {
+      "path": "ЛАД/versions/snapshot-7ad9112de2b2/app.js",
+      "bytes": 26799,
+      "sha256": "66e2d87bd31d2aa44d6e053990bab53ecb3d6e9df4bd6b0edc0ae8a75daa8655"
+    },
+    {
+      "path": "ЛАД/versions/snapshot-7ad9112de2b2/assets/midnight.wav",
+      "bytes": 529244,
+      "sha256": "74f3548b78f413769fed7b90eb36b475870de6db211a0730aa43ce22df14f834"
+    },
+    {
+      "path": "ЛАД/versions/snapshot-7ad9112de2b2/assets/peaks.js",
+      "bytes": 1747,
+      "sha256": "f81f5c3cafb2598ea2aba3c96a6b77918a459f50dfdfe2cf7cfb3f2e0f0642c4"
+    },
+    {
+      "path": "ЛАД/versions/snapshot-7ad9112de2b2/assets/tide.wav",
+      "bytes": 529244,
+      "sha256": "d17ab216cf77e1cc12779747722854db169f0dc00b8a5d6dc9cb367610c613a7"
+    },
+    {
+      "path": "ЛАД/versions/snapshot-7ad9112de2b2/assets/warm.wav",
+      "bytes": 529244,
+      "sha256": "da796cd543a710dffe1277cf9abfb88c7ed4011f022ddc1c07fd5bfc98a3d65b"
+    },
+    {
+      "path": "ЛАД/versions/snapshot-7ad9112de2b2/index.html",
+      "bytes": 20415,
+      "sha256": "94df84aaef353f4bb3034865810bc8f71124df928b947be76ce47b9d49c515d6"
+    },
+    {
+      "path": "ЛАД/versions/snapshot-7ad9112de2b2/previews/desktop.png",
+      "bytes": 218228,
+      "sha256": "8a88d2b90136a345889f6ec4265760fb0127408e0d88465a919e0fb26ee643b0"
+    },
+    {
+      "path": "ЛАД/versions/snapshot-7ad9112de2b2/previews/mobile.png",
+      "bytes": 137752,
+      "sha256": "6da2fdab801d6e1ce9c8ed0163c4152e0cd1dbf7520c2fe4f251fd23742c568f"
+    },
+    {
+      "path": "ЛАД/versions/snapshot-7ad9112de2b2/styles.css",
+      "bytes": 26827,
+      "sha256": "ccee610e11e8438169253d59e3a2412caeae85774f6b599ffa1bd4cbbcd1068d"
+    },
+    {
+      "path": "Северная линия/ARCHIVE.md",
+      "bytes": 635,
+      "sha256": "31c2863bee5f19b1eb353f70d398aaf9b73949049d7830cce4f060de07574885"
+    },
+    {
+      "path": "Северная линия/about.html",
+      "bytes": 5969,
+      "sha256": "65d0e673ae5dc2cfe5c043b011376fbf8fc236962d98428c6b8f9d90dbb94225"
+    },
+    {
+      "path": "Северная линия/app.js",
+      "bytes": 7268,
+      "sha256": "095be17956a0e5ce8545c37c6c83ff11948cbe048031e660d74ec299eb809e0b"
+    },
+    {
+      "path": "Северная линия/index.html",
+      "bytes": 11466,
+      "sha256": "deda38c65c1c86fec9baeb63893fffed94f8ab4f30779e445b0c6552d3be22a7"
+    },
+    {
+      "path": "Северная линия/previews/desktop.png",
+      "bytes": 116016,
+      "sha256": "d0d2bcf699a6cff05846b827df31e90c23672585f01cd9b56218e49c69901425"
+    },
+    {
+      "path": "Северная линия/previews/mobile.png",
+      "bytes": 64167,
+      "sha256": "9bac8b539c60f70d3cae8bdb4637abf5e4a760a3cbc3c071336575da6825a57e"
+    },
+    {
+      "path": "Северная линия/previews/tablet.png",
+      "bytes": 110903,
+      "sha256": "d072715ccba46d8acf4609023881a67866e1cd2d204b5c8813b16038509c33bb"
+    },
+    {
+      "path": "Северная линия/styles.css",
+      "bytes": 13500,
+      "sha256": "1a05d7d6e0c4c743e50c5e10bf810ca9acb6ed3121d676148cbd73b13fce9f41"
+    },
+    {
+      "path": "Северная линия/versions/snapshot-9ff92eeda339/about.html",
+      "bytes": 5969,
+      "sha256": "65d0e673ae5dc2cfe5c043b011376fbf8fc236962d98428c6b8f9d90dbb94225"
+    },
+    {
+      "path": "Северная линия/versions/snapshot-9ff92eeda339/app.js",
+      "bytes": 6451,
+      "sha256": "012d35f4f34261db3f922d29a6626dbece387cdd58e347077222d5d12ce9da59"
+    },
+    {
+      "path": "Северная линия/versions/snapshot-9ff92eeda339/index.html",
+      "bytes": 10737,
+      "sha256": "5d3be40b829cbc3c93402cb48b0d16897f250a78f968f612149a730061c40639"
+    },
+    {
+      "path": "Северная линия/versions/snapshot-9ff92eeda339/previews/about_html-desktop.png",
+      "bytes": 124811,
+      "sha256": "94dccb5e33b5d253f8306b2f0ed374e0157b074e6fc648871b1a9fb0e7dbc603"
+    },
+    {
+      "path": "Северная линия/versions/snapshot-9ff92eeda339/previews/about_html-mobile.png",
+      "bytes": 60870,
+      "sha256": "4b65f77ff85cfccb57ff7bd8388009553e1f3dec5bd410eb712c81a0ac3ed8ec"
+    },
+    {
+      "path": "Северная линия/versions/snapshot-9ff92eeda339/previews/about_html-tablet.png",
+      "bytes": 102819,
+      "sha256": "8f7491e58d357e90cb6e78e4a4ffc37b4d3367e9a600aa9aaf2de06a842585d5"
+    },
+    {
+      "path": "Северная линия/versions/snapshot-9ff92eeda339/previews/index_html-desktop.png",
+      "bytes": 116016,
+      "sha256": "d0d2bcf699a6cff05846b827df31e90c23672585f01cd9b56218e49c69901425"
+    },
+    {
+      "path": "Северная линия/versions/snapshot-9ff92eeda339/previews/index_html-mobile.png",
+      "bytes": 64167,
+      "sha256": "9bac8b539c60f70d3cae8bdb4637abf5e4a760a3cbc3c071336575da6825a57e"
+    },
+    {
+      "path": "Северная линия/versions/snapshot-9ff92eeda339/previews/index_html-tablet.png",
+      "bytes": 110903,
+      "sha256": "d072715ccba46d8acf4609023881a67866e1cd2d204b5c8813b16038509c33bb"
+    },
+    {
+      "path": "Северная линия/versions/snapshot-9ff92eeda339/styles.css",
+      "bytes": 13500,
+      "sha256": "1a05d7d6e0c4c743e50c5e10bf810ca9acb6ed3121d676148cbd73b13fce9f41"
+    },
+    {
+      "path": "Синтетическая студия/ARCHIVE.md",
+      "bytes": 751,
+      "sha256": "98232f74171c886718fc182c76f66b86e9d3a83326f40591572c564e366296e3"
+    },
+    {
+      "path": "Синтетическая студия/about.html",
+      "bytes": 181,
+      "sha256": "b40ba03b33ec87484d0114b9eb6eaf5ddb422bfef2abac61d41396341109c0b3"
+    },
+    {
+      "path": "Синтетическая студия/app.js",
+      "bytes": 330,
+      "sha256": "18046d49adb1373abe93cb27292e2202b7bc9de14c9d4c990477045b60b94f43"
+    },
+    {
+      "path": "Синтетическая студия/index.html",
+      "bytes": 611,
+      "sha256": "2eee3aaa7da6860317416c2efae7797a46794eb4b5d039a06654a4a53ac8acfe"
+    },
+    {
+      "path": "Синтетическая студия/previews/desktop.png",
+      "bytes": 21658,
+      "sha256": "b8004d58e4a93be706c6d1b49fd6b1eb3d9e929d92ccc3b7ff11ad67baf0e32b"
+    },
+    {
+      "path": "Синтетическая студия/previews/mobile.png",
+      "bytes": 17135,
+      "sha256": "b72758ad6f5613dc41b2d65e474eb315d9b2d09217633ee86a46a64cbe073a24"
+    },
+    {
+      "path": "Синтетическая студия/previews/tablet.png",
+      "bytes": 19506,
+      "sha256": "2f302c036f28af79d1422c5358403f44970750ba965c3b78f74b30bff13703f9"
+    },
+    {
+      "path": "Синтетическая студия/styles.css",
+      "bytes": 133,
+      "sha256": "b9105a22d40ffcb23c79a1569b1e142d2df5d59ffc5da709ccc038cc92dba44b"
+    },
+    {
+      "path": "Синтетическая студия/versions/snapshot-ff733d54907f/about.html",
+      "bytes": 181,
+      "sha256": "b40ba03b33ec87484d0114b9eb6eaf5ddb422bfef2abac61d41396341109c0b3"
+    },
+    {
+      "path": "Синтетическая студия/versions/snapshot-ff733d54907f/app.js",
+      "bytes": 274,
+      "sha256": "3ecf77f8dca86d4950b17494897463899e2fb652476623cb809e8c9e4325afd4"
+    },
+    {
+      "path": "Синтетическая студия/versions/snapshot-ff733d54907f/index.html",
+      "bytes": 611,
+      "sha256": "2eee3aaa7da6860317416c2efae7797a46794eb4b5d039a06654a4a53ac8acfe"
+    },
+    {
+      "path": "Синтетическая студия/versions/snapshot-ff733d54907f/previews/about_html-desktop.png",
+      "bytes": 13233,
+      "sha256": "736d8327c77591fcb26fc1ae29ec4493d886f2a74e21ab624295bb5ce75e3b15"
+    },
+    {
+      "path": "Синтетическая студия/versions/snapshot-ff733d54907f/previews/about_html-mobile.png",
+      "bytes": 9303,
+      "sha256": "739f2ffa8630b73c61f9b81589ff84f927b86a0faa3275616aa75ffa8c605d50"
+    },
+    {
+      "path": "Синтетическая студия/versions/snapshot-ff733d54907f/previews/about_html-tablet.png",
+      "bytes": 11138,
+      "sha256": "752ad4bbc8e16894a48045cc022115e37728ec35e370c2a7209f2f785f16b9b2"
+    },
+    {
+      "path": "Синтетическая студия/versions/snapshot-ff733d54907f/previews/index_html-desktop.png",
+      "bytes": 21658,
+      "sha256": "b8004d58e4a93be706c6d1b49fd6b1eb3d9e929d92ccc3b7ff11ad67baf0e32b"
+    },
+    {
+      "path": "Синтетическая студия/versions/snapshot-ff733d54907f/previews/index_html-mobile.png",
+      "bytes": 17135,
+      "sha256": "b72758ad6f5613dc41b2d65e474eb315d9b2d09217633ee86a46a64cbe073a24"
+    },
+    {
+      "path": "Синтетическая студия/versions/snapshot-ff733d54907f/previews/index_html-tablet.png",
+      "bytes": 19506,
+      "sha256": "2f302c036f28af79d1422c5358403f44970750ba965c3b78f74b30bff13703f9"
+    },
+    {
+      "path": "Синтетическая студия/versions/snapshot-ff733d54907f/styles.css",
+      "bytes": 133,
+      "sha256": "b9105a22d40ffcb23c79a1569b1e142d2df5d59ffc5da709ccc038cc92dba44b"
+    },
+    {
+      "path": "Спектр пространства/ARCHIVE.md",
+      "bytes": 645,
+      "sha256": "f2716b2c59ada0568319a3b3932867665a810126261e71f5d355f64a7ef2ecae"
+    },
+    {
+      "path": "Спектр пространства/app.js",
+      "bytes": 9232,
+      "sha256": "96464c1a42408a3baa79fabc2f275ba0fe7d91cad5cb21772179335aa68f6372"
+    },
+    {
+      "path": "Спектр пространства/approach.html",
+      "bytes": 5378,
+      "sha256": "e070f44d99dd228a0880a3c97d430c2666b491a36a3c15f267269098fb90d04d"
+    },
+    {
+      "path": "Спектр пространства/index.html",
+      "bytes": 6935,
+      "sha256": "5472336a738bb3e3df0b6061177cbef19076c2cf52e59a95f20b8c19cfdaa0b1"
+    },
+    {
+      "path": "Спектр пространства/previews/desktop.png",
+      "bytes": 117004,
+      "sha256": "74b8ac11e910ff2965448648c14ba61ef8136f432666dc4b77d1e30e4ba3350a"
+    },
+    {
+      "path": "Спектр пространства/previews/mobile.png",
+      "bytes": 51968,
+      "sha256": "1b25bae2d74605d71739b2346169d128a4fdb417d35e6febd6952e0b114d469e"
+    },
+    {
+      "path": "Спектр пространства/previews/tablet.png",
+      "bytes": 79027,
+      "sha256": "15a84700541541ca12c427811c50625021df34603baa90c669baf12781fa8c4b"
+    },
+    {
+      "path": "Спектр пространства/styles.css",
+      "bytes": 12659,
+      "sha256": "eb66e29dd04e168fb0c619329bda03dcaeebd443a22399bb718638114d40747d"
+    },
+    {
+      "path": "Спектр пространства/versions/snapshot-46f453af539f/app.js",
+      "bytes": 8944,
+      "sha256": "b16b8159bf1bdc86c39c29b51799425ea58347658cef96d06ea78c5f13ef70cc"
+    },
+    {
+      "path": "Спектр пространства/versions/snapshot-46f453af539f/approach.html",
+      "bytes": 5378,
+      "sha256": "e070f44d99dd228a0880a3c97d430c2666b491a36a3c15f267269098fb90d04d"
+    },
+    {
+      "path": "Спектр пространства/versions/snapshot-46f453af539f/index.html",
+      "bytes": 6656,
+      "sha256": "b1d93de510e4af87e980f83c2f6cc87a415048d317a6cf6cf324554fdc6d1a97"
+    },
+    {
+      "path": "Спектр пространства/versions/snapshot-46f453af539f/previews/approach_html-desktop.png",
+      "bytes": 107831,
+      "sha256": "05ce9ca78607c277827277b40afaf86d0f574f3e6ecb2cf2e7b31c43d8163629"
+    },
+    {
+      "path": "Спектр пространства/versions/snapshot-46f453af539f/previews/approach_html-mobile.png",
+      "bytes": 53896,
+      "sha256": "8b2a0becc9d9fc9cad12a5f0fe08b577b0c9546933447a09714fa01bf89e5908"
+    },
+    {
+      "path": "Спектр пространства/versions/snapshot-46f453af539f/previews/approach_html-tablet.png",
+      "bytes": 96887,
+      "sha256": "d057240eeede40b2749357925cf15bd70a103aa7ef7c8e807fa6bffcd6e04ba1"
+    },
+    {
+      "path": "Спектр пространства/versions/snapshot-46f453af539f/previews/index_html-desktop.png",
+      "bytes": 117004,
+      "sha256": "74b8ac11e910ff2965448648c14ba61ef8136f432666dc4b77d1e30e4ba3350a"
+    },
+    {
+      "path": "Спектр пространства/versions/snapshot-46f453af539f/previews/index_html-mobile-motion-after.png",
+      "bytes": 49865,
+      "sha256": "88374a48fe7130cdda657d3fd82d04754fcde859ec8c7b1c051ac6e0562b8a28"
+    },
+    {
+      "path": "Спектр пространства/versions/snapshot-46f453af539f/previews/index_html-mobile-motion-before.png",
+      "bytes": 50623,
+      "sha256": "314a895f32bd6e7f2a4354427ea22f2f24794e68032681c2d73a68af0ab2c654"
+    },
+    {
+      "path": "Спектр пространства/versions/snapshot-46f453af539f/previews/index_html-mobile.png",
+      "bytes": 50623,
+      "sha256": "314a895f32bd6e7f2a4354427ea22f2f24794e68032681c2d73a68af0ab2c654"
+    },
+    {
+      "path": "Спектр пространства/versions/snapshot-46f453af539f/previews/index_html-tablet.png",
+      "bytes": 79027,
+      "sha256": "15a84700541541ca12c427811c50625021df34603baa90c669baf12781fa8c4b"
+    },
+    {
+      "path": "Спектр пространства/versions/snapshot-46f453af539f/styles.css",
+      "bytes": 11769,
+      "sha256": "ffc814ba013dca18759e5b7d0cae04d1bf5fd861e25c3fbf353da947c25dad94"
+    }
+  ]
+}
